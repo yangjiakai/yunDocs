@@ -69,6 +69,14 @@
       ]
     },
     {
+      "group": "邮件",
+      "icon": "envelope",
+      "pages": [
+        "email/clerk",
+        "email/resend"
+      ]
+    },
+    {
       "group": "API Documentation",
       "pages": [
         "api-reference/introduction"
