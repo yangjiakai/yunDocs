@@ -31,23 +31,23 @@
       "url": "api-reference"
     }
   ],
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
-    }
-  ],
+  // "anchors": [
+  //   {
+  //     "name": "Documentation",
+  //     "icon": "book-open-cover",
+  //     "url": "https://mintlify.com/docs"
+  //   },
+  //   {
+  //     "name": "Community",
+  //     "icon": "slack",
+  //     "url": "https://mintlify.com/community"
+  //   },
+  //   {
+  //     "name": "Blog",
+  //     "icon": "newspaper",
+  //     "url": "https://mintlify.com/blog"
+  //   }
+  // ],
   "navigation": [
     {
       "group": "Get Started",
@@ -76,22 +76,22 @@
         "email/resend"
       ]
     },
+    // {
+    //   "group": "API Documentation",
+    //   "pages": [
+    //     "api-reference/introduction"
+    //   ]
+    // },
+    // {
+    //   "group": "Endpoint Examples",
+    //   "pages": [
+    //     "api-reference/endpoint/get",
+    //     "api-reference/endpoint/create",
+    //     "api-reference/endpoint/delete"
+    //   ]
+    // },
     {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
-      ]
-    },
-    {
-      "group": "1.comfyui-api",
+      "group": "ComfyUI-Api",
       "pages": [
         "api-reference/comfyui-api/1.提交任务",
         "api-reference/comfyui-api/2.获取历史任务信息"
