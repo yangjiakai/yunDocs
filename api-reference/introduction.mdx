@@ -1,33 +1,46 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: 'Yundoc 文档简介'
+description: 'YUNBOT AI 图像生成接口使用指南'
 ---
 
 <Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
+  本文档详细介绍了 YUNBOT 的 API 调用方法，帮助开发者快速接入我们的 AI 图像生成服务。
 </Note>
 
-## Welcome
+## 概述
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+YUNBOT 提供了功能强大且易于使用的 RESTful API，让您能够在自己的应用中轻松集成 AI 图像生成功能。通过这些接口，您可以实现文本生成图像、图像编辑、风格迁移等多种功能。
 
 <Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
+  title="API 接口清单"
+  icon="code"
+  href="/api-reference/endpoints"
 >
-  View the OpenAPI specification file
+  查看完整的 API 接口列表和调用示例
 </Card>
 
-## Authentication
+## 认证方式
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+所有的 API 请求都需要进行身份验证。我们使用 API Key 进行认证，请在请求头中包含您的 API Key。
 
 ```json
-"security": [
-  {
-    "bearerAuth": []
+{
+  "headers": {
+    "Authorization": "Bearer your_api_key_here",
+    "Content-Type": "application/json"
   }
-]
+}
 ```
+
+## 主要功能
+
+我们的 API 支持以下核心功能：
+
+- 文本生成图像（Text-to-Image）
+- 图像编辑与修改（Image Editing）
+- 风格迁移（Style Transfer）
+- 图像放大与优化（Upscaling）
+- 批量生成（Batch Generation）
+
+每个功能都有相应的 API 端点，您可以根据需求选择合适的接口进行调用。详细的接口说明和示例代码，请参考各个具体接口的文档页面。
+

@@ -2,38 +2,50 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Starter Kit",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/logo.svg",
+    "light": "/logo/logo.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#7C3AED",
+    "light": "#A78BFA",
+    "dark": "#5B21B6",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#7C3AED",
+      "to": "#A78BFA"
     }
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "技术支持",
+      "url": "mailto:hi@yjkbako@gmail.com"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "AI BOX",
+    "url": "https://www.yunrobot.cn/"
   },
   "tabs": [
     {
-      "name": "API Reference",
+      "name": "API 文档",
       "url": "api-reference"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "文档",
+      "icon": "book-open-cover",
+      "url": "https://docs.yunrobot.cn"
+    },
+    {
+      "name": "社区",
+      "icon": "slack",
+      "url": "https://www.yunrobot.cn"
     }
   ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "快速开始",
       "pages": [
         "introduction",
         "quickstart",
@@ -41,25 +53,11 @@
       ]
     },
     {
-      "group": "Essentials",
+      "group": "API 文档",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "api-reference/introduction"
       ]
     },
-    {
-      "group": "邮件",
-      "icon": "envelope",
-      "pages": [
-        "email/clerk",
-        "email/resend"
-      ]
-    },
-    
     {
       "group": "ComfyUI-Api",
       "pages": [
