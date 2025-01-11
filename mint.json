@@ -61,8 +61,12 @@
     {
       "group": "ComfyUI-Api",
       "pages": [
-        "api-reference/comfyui-api/1.提交任务",
-        "api-reference/comfyui-api/2.获取历史任务信息"
+        "api-reference/comfyui-api/post-prompt",
+        "api-reference/comfyui-api/get-prompt",
+        "api-reference/comfyui-api/get-history",
+        "api-reference/comfyui-api/get-system_stats",
+        "api-reference/comfyui-api/get-view",
+        "api-reference/comfyui-api/ws"
       ]
     }
   ],
