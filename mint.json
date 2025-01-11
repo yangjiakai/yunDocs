@@ -94,7 +94,7 @@
       "group": "1.comfyui-api",
       "pages": [
         "api-reference/comfyui-api/1.提交任务",
-        "api-reference/comfyui-api/2.查询任务"
+        "api-reference/comfyui-api/2.获取历史任务信息"
       ]
     }
   ],
