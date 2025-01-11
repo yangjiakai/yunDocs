@@ -89,6 +89,13 @@
         "api-reference/endpoint/create",
         "api-reference/endpoint/delete"
       ]
+    },
+    {
+      "group": "1.comfyui-api",
+      "pages": [
+        "api-reference/comfyui-api/1.提交任务",
+        "api-reference/comfyui-api/2.查询任务"
+      ]
     }
   ],
   "footerSocials": {

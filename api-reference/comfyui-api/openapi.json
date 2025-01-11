@@ -1,0 +1,493 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "个人项目",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "tags": [],
+  "paths": {
+    "/prompt": {
+      "post": {
+        "summary": "/prompt",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": [
+                  "01JCK6WDFJCEAN8AXAS9G77H3E"
+                ]
+              },
+              "example": {
+                "client_id": "456488948754864847984646",
+                "prompt": {
+                  "3": {
+                    "inputs": {
+                      "seed": 55129609097542,
+                      "steps": 12,
+                      "cfg": 8,
+                      "sampler_name": "dpmpp_sde",
+                      "scheduler": "normal",
+                      "denoise": 1,
+                      "model": [
+                        "25",
+                        0
+                      ],
+                      "positive": [
+                        "6",
+                        0
+                      ],
+                      "negative": [
+                        "7",
+                        0
+                      ],
+                      "latent_image": [
+                        "5",
+                        0
+                      ]
+                    },
+                    "class_type": "KSampler"
+                  },
+                  "5": {
+                    "inputs": {
+                      "width": 512,
+                      "height": 512,
+                      "batch_size": 1
+                    },
+                    "class_type": "EmptyLatentImage"
+                  },
+                  "6": {
+                    "inputs": {
+                      "text": "masterpiece HDR victorian portrait painting of woman, blonde hair, mountain nature, blue sky\n",
+                      "clip": [
+                        "25",
+                        1
+                      ]
+                    },
+                    "class_type": "CLIPTextEncode"
+                  },
+                  "7": {
+                    "inputs": {
+                      "text": "bad hands, text, watermark\n",
+                      "clip": [
+                        "25",
+                        1
+                      ]
+                    },
+                    "class_type": "CLIPTextEncode"
+                  },
+                  "8": {
+                    "inputs": {
+                      "samples": [
+                        "3",
+                        0
+                      ],
+                      "vae": [
+                        "25",
+                        2
+                      ]
+                    },
+                    "class_type": "VAEDecode"
+                  },
+                  "9": {
+                    "inputs": {
+                      "filename_prefix": "ComfyUI",
+                      "images": [
+                        "8",
+                        0
+                      ]
+                    },
+                    "class_type": "SaveImage"
+                  },
+                  "11": {
+                    "inputs": {
+                      "seed": 811699257308810,
+                      "steps": 14,
+                      "cfg": 8,
+                      "sampler_name": "uni_pc_bh2",
+                      "scheduler": "normal",
+                      "denoise": 0.5,
+                      "model": [
+                        "25",
+                        0
+                      ],
+                      "positive": [
+                        "6",
+                        0
+                      ],
+                      "negative": [
+                        "7",
+                        0
+                      ],
+                      "latent_image": [
+                        "20",
+                        0
+                      ]
+                    },
+                    "class_type": "KSampler"
+                  },
+                  "12": {
+                    "inputs": {
+                      "filename_prefix": "ComfyUI",
+                      "images": [
+                        "13",
+                        0
+                      ]
+                    },
+                    "class_type": "SaveImage"
+                  },
+                  "13": {
+                    "inputs": {
+                      "samples": [
+                        "11",
+                        0
+                      ],
+                      "vae": [
+                        "25",
+                        2
+                      ]
+                    },
+                    "class_type": "VAEDecode"
+                  },
+                  "20": {
+                    "inputs": {
+                      "pixels": [
+                        "24",
+                        0
+                      ],
+                      "vae": [
+                        "25",
+                        2
+                      ]
+                    },
+                    "class_type": "VAEEncode"
+                  },
+                  "21": {
+                    "inputs": {
+                      "samples": [
+                        "3",
+                        0
+                      ],
+                      "vae": [
+                        "25",
+                        2
+                      ]
+                    },
+                    "class_type": "VAEDecode"
+                  },
+                  "22": {
+                    "inputs": {
+                      "upscale_model": [
+                        "23",
+                        0
+                      ],
+                      "image": [
+                        "21",
+                        0
+                      ]
+                    },
+                    "class_type": "ImageUpscaleWithModel"
+                  },
+                  "23": {
+                    "inputs": {
+                      "model_name": "RealESRGAN_x4plus.pth"
+                    },
+                    "class_type": "UpscaleModelLoader"
+                  },
+                  "24": {
+                    "inputs": {
+                      "upscale_method": "bilinear",
+                      "width": 1024,
+                      "height": 1024,
+                      "crop": "disabled",
+                      "image": [
+                        "22",
+                        0
+                      ]
+                    },
+                    "class_type": "ImageScale"
+                  },
+                  "25": {
+                    "inputs": {
+                      "ckpt_name": "babes_20.safetensors"
+                    },
+                    "class_type": "CheckpointLoaderSimple"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "prompt_id": {
+                      "type": "string"
+                    },
+                    "number": {
+                      "type": "integer"
+                    },
+                    "node_errors": {
+                      "type": "object",
+                      "properties": {}
+                    }
+                  },
+                  "required": [
+                    "prompt_id",
+                    "number",
+                    "node_errors"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      },
+      "get": {
+        "summary": "/prompt",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/history": {
+      "get": {
+        "summary": "/history",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              },
+              "example": {
+                "prompt_id": "697a27ec-4aae-42df-af67-be07de631b0c"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/system_stats": {
+      "get": {
+        "summary": "/system_stats",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/object_info": {
+      "get": {
+        "summary": "/object_info",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/view": {
+      "get": {
+        "summary": "/view",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/ws": {
+      "get": {
+        "summary": "/ws",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/queue": {
+      "get": {
+        "summary": "/queue",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/embeddings": {
+      "get": {
+        "summary": "/embeddings",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/extensions": {
+      "get": {
+        "summary": "/extensions",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    }
+  },
+  "components": {
+    "schemas": {},
+    "securitySchemes": {}
+  },
+  "servers": []
+}
