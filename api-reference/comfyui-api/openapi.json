@@ -489,5 +489,9 @@
     "schemas": {},
     "securitySchemes": {}
   },
-  "servers": []
+  "servers": [
+    {
+      "url": "http://localhost:8188"
+    }
+  ]
 }
