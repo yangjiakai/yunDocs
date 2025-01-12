@@ -1,0 +1,53 @@
+---
+title: 'ComfyUI 启动参数'
+description: 'ComfyUI 启动参数'
+---
+| 参数名称                          | 类型           | 默认值               | 描述                                                                                     |
+|-----------------------------------|----------------|----------------------|------------------------------------------------------------------------------------------|
+| `--listen`                        | `str`          | `127.0.0.1`         | 指定监听的 IP 地址。                                                                     |
+| `--port`                          | `int`          | `8188`               | 设置监听端口。                                                                           |
+| `--tls-keyfile`                  | `str`          |                      | TLS (SSL) 密钥文件的路径，启用 TLS。                                                    |
+| `--tls-certfile`                 | `str`          |                      | TLS (SSL) 证书文件的路径，启用 TLS。                                                   |
+| `--enable-cors-header`           | `str`          | `None`               | 启用 CORS (跨域资源共享)，可选源或允许所有源。                                          |
+| `--max-upload-size`              | `float`        | `100`                | 设置最大上传大小（MB）。                                                                 |
+| `--extra-model-paths-config`     | `str`          | `None`               | 加载一个或多个 `extra_model_paths.yaml` 文件。                                          |
+| `--output-directory`              | `str`          | `None`               | 设置 ComfyUI 输出目录。                                                                  |
+| `--preview-method`                | [LatentPreviewMethod](cci:2://file:///Users/peng/project/gitlab/yunbot-comfyui/comfy/cli_args.py:88:0-92:19) | `LatentPreviewMethod.NoPreviews` | 默认的预览方法。                                                                         |
+| `--preview-size`                  | `int`          | `512`                | 设置采样节点的最大预览大小。                                                             |
+| `--front-end-root`                | `str`          | `None`               | 前端根目录的路径。                                                                       |
+| `--disable-auto-launch`           | `store_true`   |                      | 禁用自动启动浏览器。                                                                     |
+| `--cuda-device`                   | `int`          | `None`               | 设置此实例将使用的 CUDA 设备 ID。                                                       |
+| `--cuda-malloc`                   | `store_true`   |                      | 启用 `cudaMallocAsync`（默认启用）。                                                     |
+| `--disable-cuda-malloc`           | `store_true`   |                      | 禁用 `cudaMallocAsync`。                                                                  |
+| `--force-fp32`                    | `store_true`   |                      | 强制使用 fp32。                                                                          |
+| `--force-fp16`                    | `store_true`   |                      | 强制使用 fp16。                                                                          |
+| `--fp32-unet`                     | `store_true`   |                      | 在 fp32 中运行扩散模型。                                                                 |
+| `--fp64-unet`                     | `store_true`   |                      | 在 fp64 中运行扩散模型。                                                                 |
+| `--bf16-unet`                     | `store_true`   |                      | 在 bf16 中运行扩散模型。                                                                 |
+| `--fp16-unet`                     | `store_true`   |                      | 在 fp16 中运行扩散模型。                                                                 |
+| `--fp8_e4m3fn-unet`               | `store_true`   |                      | 在 fp8_e4m3fn 中存储 unet 权重。                                                         |
+| `--fp8_e5m2-unet`                 | `store_true`   |                      | 在 fp8_e5m2 中存储 unet 权重。                                                           |
+| `--fp16-vae`                      | `store_true`   |                      | 在 fp16 中运行 VAE，可能导致黑色图像。                                                  |
+| `--fp32-vae`                      | `store_true`   |                      | 在全精度 fp32 中运行 VAE。                                                               |
+| `--bf16-vae`                      | `store_true`   |                      | 在 bf16 中运行 VAE。                                                                      |
+| `--cpu-vae`                       | `store_true`   |                      | 在 CPU 上运行 VAE。                                                                       |
+| `--fp8_e4m3fn-text-enc`           | `store_true`   |                      | 在 fp8 中存储文本编码器权重（e4m3fn 变体）。                                             |
+| `--fp8_e5m2-text-enc`             | `store_true`   |                      | 在 fp8 中存储文本编码器权重（e5m2 变体）。                                             |
+| `--fp16-text-enc`                 | `store_true`   |                      | 在 fp16 中存储文本编码器权重。                                                           |
+| `--fp32-text-enc`                 | `store_true`   |                      | 在 fp32 中存储文本编码器权重。                                                           |
+| `--cache-lru`                     | `int`          | `0`                  | 使用 LRU 缓存，最多缓存 N 个节点结果。                                                  |
+| `--use-split-cross-attention`     | `store_true`   |                      | 使用分割交叉注意力优化。                                                                  |
+| `--use-quad-cross-attention`      | `store_true`   |                      | 使用子二次交叉注意力优化。                                                                |
+| `--use-pytorch-cross-attention`   | `store_true`   |                      | 使用新的 PyTorch 2.0 交叉注意力函数。                                                   |
+| `--use-sage-attention`            | `store_true`   |                      | 使用 Sage 注意力。                                                                         |
+| `--disable-xformers`              | `store_true`   |                      | 禁用 xformers。                                                                           |
+| `--force-upcast-attention`        | `store_true`   |                      | 强制启用注意力上升。                                                                       |
+| `--dont-upcast-attention`         | `store_true`   |                      | 禁用所有注意力上升。                                                                       |
+| `--gpu-only`                      | `store_true`   |                      | 在 GPU 上存储和运行所有内容。                                                             |
+| `--highvram`                      | `store_true`   |                      | 默认情况下，模型将在使用后卸载到 CPU 内存。此选项保持它们在 GPU 内存中。                  |
+| `--normalvram`                    | `store_true`   |                      | 如果低内存自动启用，则强制使用正常内存。                                                  |
+| `--lowvram`                       | `store_true`   |                      | 将 unet 拆分为多个部分以使用更少的内存。                                                 |
+| `--novram`                        | `store_true`   |                      | 当低内存不足时使用。                                                                       |
+| `--cpu`                           | `store_true`   |                      | 使用 CPU 处理所有内容（较慢）。                                                            |
+| `--reserve-vram`                  | `float`        | `None`               | 设置希望保留给操作系统/其他软件使用的内存量（GB）。                                      |
+| `--default-hashing-function`      | `str`          | `sha256`             | 选择用于重复文件名/内容比较的哈希函数。默认是 sha256。                                   |

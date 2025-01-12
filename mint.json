@@ -68,6 +68,12 @@
         "api-reference/comfyui-api/get-view",
         "api-reference/comfyui-api/get-ws"
       ]
+    },
+    {
+      "group": "ComfyUI 相关文档",
+      "pages": [
+        "comfyui-docs/comfyui-args"
+      ]
     }
   ],
   "footerSocials": {
